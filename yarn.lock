@@ -617,10 +617,6 @@
     "@types/node-fetch" "^2.5.10"
     node-fetch "^2.6.1"
 
-"@pandacss/is-valid-prop@0.41.0":
-  version "0.41.0"
-  resolved "https://registry.yarnpkg.com/@pandacss/is-valid-prop/-/is-valid-prop-0.41.0.tgz#4b82222639a096711d0601fb15f491ae5e084ff8"
-  integrity sha512-BE6h6CsJk14ugIRrsazJtN3fcg+KDFRat1Bs93YFKH6jd4DOb1yUyVvC70jKqPVvg70zEcV8acZ7VdcU5TLu+w==
 
 "@pkgr/core@^0.2.0":
   version "0.2.0"
