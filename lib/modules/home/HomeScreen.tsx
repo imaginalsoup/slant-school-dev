@@ -1,11 +1,11 @@
 import React from 'react'
 import type { ExtendedRecordMap } from 'notion-types';
 import { NotionRenderer } from 'react-notion-x';
-import { getPageImageUrls, defaultMapImageUrl, getPageTitle, getBlockTitle } from 'notion-utils';
+import { getPageImageUrls, defaultMapImageUrl, getPageTitle } from 'notion-utils';
 import Divider from '../../components/Divider';
-import AboutScreen from '../about/AboutScreen';
 
 type Props = { recordMap: ExtendedRecordMap }
+
 
 const HomeScreen = ({ recordMap }: Props) => {
 	const bannerImage: string = getPageImageUrls(recordMap, {
@@ -37,6 +37,5 @@ const HomeScreen = ({ recordMap }: Props) => {
 		</div>
 	);
 }
-
 
 export default HomeScreen

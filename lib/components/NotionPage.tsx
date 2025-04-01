@@ -1,3 +1,4 @@
+import React from 'react';
 import { Head } from "next/document";
 import type { ExtendedRecordMap } from "notion-types";
 import { getPageTitle } from "notion-utils";
