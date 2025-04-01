@@ -1,16 +1,15 @@
 import React from 'react';
-
-import Head from 'next/head';
-import { getPageTitle } from 'notion-utils';
-import { NotionRenderer } from 'react-notion-x';
-import type { ExtendedRecordMap } from 'notion-types';
+import { Head } from "next/document";
+import type { ExtendedRecordMap } from "notion-types";
+import { getPageTitle } from "notion-utils";
+import { NotionRenderer } from "react-notion-x";
 
 export function NotionPage({
 	recordMap,
-	// rootPageId,
+	rootPageId,
 }: {
 	recordMap: ExtendedRecordMap;
-	// rootPageId?: string;
+	rootPageId?: string;
 }) {
 	if (!recordMap) {
 		return null;
@@ -29,8 +28,11 @@ export function NotionPage({
 			</Head>
 			<NotionRenderer
 				recordMap={recordMap}
+				fullPage={true}
+				darkMode={false}
+				rootPageId={rootPageId}
+				disableHeader={true}
 			/>
-
 		</>
 	);
 }
