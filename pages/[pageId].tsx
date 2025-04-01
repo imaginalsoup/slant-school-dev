@@ -4,7 +4,7 @@ import type { ExtendedRecordMap } from 'notion-types';
 
 import { NotionPage } from '../lib/components/NotionPage';
 import { rootNotionPageId } from '../lib/config';
-import { notion } from '../lib/notion';
+import notion from '../lib/notion';
 
 type nextContextTypes = {
 	params: { pageId: string };
