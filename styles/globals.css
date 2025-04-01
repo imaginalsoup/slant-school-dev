@@ -14,23 +14,22 @@ body {
 
 
 /* FOR HOMEPAGE */
-header.notion-header {
+/* header.notion-header {
 	display: none;
 	/* : hidden; */
 	/* height: 0; */
-}
 /* 
 .notion-page-cover-wrapper img {
 	position: absolute;
 	height: 100vh;
 } */
 
-.banner {
+/* .banner {
 	height: 90vh;
 	display: flex;
 	flex-direction: column;
-}
-
+} */
+/* 
 .hero-text {
 	width: 80%;
 	margin: 80px auto;
@@ -40,43 +39,44 @@ header.notion-header {
 	flex-direction: column;
 	/* height: 100vh; */
 	/* border: 2px solid yellow; */
-}
+/* }  */
+/* */
 
-.hero-text h1 {
+/* .hero-text h1 {
 	z-index: 100;
 	color: rgb(240, 248, 255);
 	font-size: 120px;
-}
+} */
 
 .notion-text {
-	  line-height: 1.6;
+	  line-height: 1.8;
 		margin-bottom: 1rem;
 }
 
-.banner .notion-text{
+/* .banner .notion-text{
 	position: relative;
 	z-index: 100;
 	color: aliceblue;
 	font-size: xx-large;
-}
+} */
 
-.notion-title {
+/* .notion-title {
 	color: #181818;
-}
+} */
 
-h1, h2, h3, h4, p {
+/* h1, h2, h3, h4, p {
 	font-family: 'Roboto Mono', monospace;
 	color: rgb(240, 248, 255);
-	/* border: 1px solid palegreen; */
-}
+	border: 1px solid palegreen;
+} */
 
 .divider{
 	height: 8px;
 	width: 100%;
-	background-color: #cc5c00;
+	background-color: #c16a22;
 }
 
-.about {
+/* .about {
 	width: 80%;
 	margin: auto;
-}
+} */
