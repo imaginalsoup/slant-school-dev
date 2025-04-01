@@ -10,6 +10,7 @@ type Props = {
 	about: ExtendedRecordMap;
 	proponent: ExtendedRecordMap;
 	lectures: lecturesProps;
+	lectureList: ExtendedRecordMap;
 }
 
 export const getStaticProps = async () => {
@@ -17,6 +18,7 @@ export const getStaticProps = async () => {
 	const about = await notion.getPage(process.env.ABOUT_PAGE);
 	const proponent = await notion.getPage(process.env.PROPONENT);
 
+	const lectureList = await notion.getPage(process.env.LECTURES);
 
 	const lecture1 = await notion.getPage(process.env.LECTURE1);
 	const lecture2 = await notion.getPage(process.env.LECTURE2);
@@ -32,15 +34,16 @@ export const getStaticProps = async () => {
 				{ id: "ecocriticism", content: lecture3 },
 			],
 			proponent: proponent,
+			lectureList: lectureList,
 		},
 		revalidate: 10,
 	};
 };
 
-export default function Page({ about, banner, lectures, proponent }: Props) {
+export default function Page({ about, banner, lectures, proponent, lectureList }: Props) {
 	return (
 		<>
-			<HomeScreen banner={banner} about={about} lectures={lectures} proponent={proponent} />
+			<HomeScreen banner={banner} about={about} lectures={lectures} proponent={proponent} lectureList={lectureList} />
 		</>
 	);
 }

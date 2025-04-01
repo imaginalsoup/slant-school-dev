@@ -1,9 +1,10 @@
+import { Box } from '@chakra-ui/react'
 import React from 'react'
 
 
 const Divider = () => {
 	return (
-		<div className='divider' />
+		<Box className='divider' />
 	)
 }
 

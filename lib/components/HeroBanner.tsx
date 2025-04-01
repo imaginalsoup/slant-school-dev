@@ -17,19 +17,20 @@ const HeroBanner = ({ banner }: Props) => {
 
 	return (
 		<Container
+			className='banner'
 			padding='32px'
 			height='60vh'
 			style={{
-				backgroundImage: `linear-gradient(to bottom, #2E210BCD,
-						#2E210BE1), url(${bannerImage})`,
+				backgroundImage: `url(${bannerImage})`,
+				// backgroundImage: `linear-gradient(to bottom, #2E210BCD,
+				// #2E210BE1), url(${bannerImage})`,
 				backgroundPosition: 'center',
 				backgroundSize: 'cover',
 			}}
 			alignContent='center'
-		// border='2px solid pink'
 		>
 			<VStack
-				color='white'
+				color="var(--white)"
 				width={{ base: '100%', md: '50%' }}
 				margin='auto'
 				textAlign='center'

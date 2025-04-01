@@ -1,82 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+:root {
+  --black: #181818;
+  --white: #fffefad5;
+	--orange: #cc5c00;
+	--orange2: #c16a22;
+	--yellow: #d6c72d;
+	--bg: #ecebe6;
+}
+
 * {
     box-sizing: border-box;
-		/* border: 1px solid orange; */
+		/* border: 1px solid var(--yellow); */
 }
 
 body {
     padding: 0;
     margin: 0;
-		background-color: #ecebe6 !important;
+		background-color: var(--bg) !important;
 		font-family: 'Roboto Mono', monospace, sans-serif;
 }
-
-
-/* FOR HOMEPAGE */
-/* header.notion-header {
-	display: none;
-	/* : hidden; */
-	/* height: 0; */
-/* 
-.notion-page-cover-wrapper img {
-	position: absolute;
-	height: 100vh;
-} */
-
-/* .banner {
-	height: 90vh;
-	display: flex;
-	flex-direction: column;
-} */
-/* 
-.hero-text {
-	width: 80%;
-	margin: 80px auto;
-	padding-left: 40px;
-	padding-right: 240px;
-	display: flex;
-	flex-direction: column;
-	/* height: 100vh; */
-	/* border: 2px solid yellow; */
-/* }  */
-/* */
-
-/* .hero-text h1 {
-	z-index: 100;
-	color: rgb(240, 248, 255);
-	font-size: 120px;
-} */
 
 .notion-text {
 	  line-height: 1.8;
 		margin-bottom: 1rem;
 }
 
-/* .banner .notion-text{
-	position: relative;
-	z-index: 100;
-	color: aliceblue;
-	font-size: xx-large;
-} */
-
-/* .notion-title {
-	color: #181818;
-} */
-
-/* h1, h2, h3, h4, p {
-	font-family: 'Roboto Mono', monospace;
-	color: rgb(240, 248, 255);
-	border: 1px solid palegreen;
-} */
-
 .divider{
-	height: 8px;
+	height: 10px;
 	width: 100%;
-	background-color: #c16a22;
+	background-color: var(--orange2);
 }
 
-/* .about {
-	width: 80%;
+/* remove icons */
+.notion-page-icon-inline.notion-page-icon-image {
+	display: none;
+}
+
+.lecture-summary a {
+	width: 100%;
+	font-size: large;
+	font-weight: 500;
+	color: var(--orange);
+	display: flex;
+	justify-self: end;
+	justify-items: end;
+	margin-bottom: 4px;
+}
+
+.lecture-summary td:nth-child(2) {
+	padding-bottom: 32px;
+}
+
+.lecture-summary code {
+	display: block;
+	font-size: normal;
+	padding-top: 12px;
+}
+
+.lecture-summary td:first-child {
+	align-content: flex-start;
+	font-size: normal;
+	width: 120px !important;
+	padding-right: 24px;
+}
+
+.lecture-summary table ~ * {
+	display: none;
+}
+
+.lecture-summary table {
+	width: 100%;
 	margin: auto;
-} */
+}
