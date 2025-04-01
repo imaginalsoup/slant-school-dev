@@ -1,7 +1,7 @@
 import React from 'react';
 
 import type { ExtendedRecordMap } from 'notion-types';
-import notion from '../lib/notion';
+import { notion } from '../lib/notion';
 import AboutScreen from '../lib/modules/about/AboutScreen';
 
 export const getStaticProps = async () => {
