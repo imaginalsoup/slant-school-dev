@@ -1,40 +1,59 @@
 import React from 'react'
 import type { ExtendedRecordMap } from 'notion-types';
 import { NotionRenderer } from 'react-notion-x';
-import { getPageImageUrls, defaultMapImageUrl, getPageTitle } from 'notion-utils';
 import Divider from '../../components/Divider';
+import { Box, Container, Heading, Spacer } from '@chakra-ui/react';
+import AboutSection from '../../components/AboutSection';
+import HeroBanner from '../../components/HeroBanner';
+import AboutProponent from '../../components/AboutProponent';
+import NavBar from '../../components/NavBar';
 
-type Props = { recordMap: ExtendedRecordMap }
+type lectureProps = {
+	id: string;
+	content: ExtendedRecordMap;
+}
 
+type Props = {
+	banner: ExtendedRecordMap;
+	about: ExtendedRecordMap;
+	proponent: ExtendedRecordMap;
+	lectures: Array<lectureProps>;
+}
 
-const HomeScreen = ({ recordMap }: Props) => {
-	const bannerImage: string = getPageImageUrls(recordMap, {
-		mapImageUrl: defaultMapImageUrl
-	})[0];
-
-	const title = getPageTitle(recordMap);
-
+const HomeScreen = ({ banner, about, lectures, proponent }: Props) => {
 	return (
-		<div>
-			<div className='banner notion-page-cover-wrapper'
-				style={{
-					backgroundImage: `linear-gradient(to bottom, #2E210BFA, rgba(245, 246, 252, 0.02),
-				#2E210BE1), url(${bannerImage})`,
-					backgroundPosition: 'center',
-					backgroundSize: 'cover',
-					// backgroundRepeat: 'no-repeat'
-				}}
-			>
-				<div className='hero-text'>
-					<h1>{title}</h1>
-					<NotionRenderer
-						disableHeader={true}
-						recordMap={recordMap}
-					/>
-				</div>
-			</div >
+		<Container>
+			<NavBar />
+			<HeroBanner banner={banner} />
 			<Divider />
-		</div>
+			<Container width='80%' margin='auto' paddingX='80px'>
+				<Box width='100%' margin='auto' paddingTop='64px'>
+					<AboutSection about={about} />
+				</Box>
+				<Spacer />
+				<hr />
+				<Box>
+					<Heading>Lectures</Heading>
+					{lectures.map((item, index) =>
+						<Box key={index.toString()} paddingBottom='56px'>
+							<Heading color='#cc5c00'>
+								<i>
+									{(index + 1).toString()} {item.id} aslant
+								</i>
+							</Heading>
+							<Box paddingLeft='24px'>
+								<NotionRenderer recordMap={item.content} />
+							</Box>
+						</Box>
+					)}
+				</Box >
+			</Container>
+			<Box background='#181818' color='white' paddingTop='64px' paddingBottom='90px' >
+				<Box width='80%' margin='auto'>
+					<AboutProponent proponent={proponent} />
+				</Box>
+			</Box>
+		</Container >
 	);
 }
 
