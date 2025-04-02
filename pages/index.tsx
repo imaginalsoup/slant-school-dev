@@ -1,9 +1,9 @@
 import React from "react";
+import NavBar from "../lib/components/NavBar";
 import notion from "../lib/notion";
 import HomeScreen from "../lib/modules/home/HomeScreen";
 import type { ExtendedRecordMap } from "notion-types";
 import type { lecturesProps } from "../lib/types/lecture-props";
-
 
 type Props = {
 	banner: ExtendedRecordMap;
@@ -40,10 +40,22 @@ export const getStaticProps = async () => {
 	};
 };
 
-export default function Page({ about, banner, lectures, proponent, lectureList }: Props) {
+export default function Page({ about, banner, lectures, proponent, lectureList, }: Props) {
 	return (
 		<>
+			<NavBar />
 			<HomeScreen banner={banner} about={about} lectures={lectures} proponent={proponent} lectureList={lectureList} />
 		</>
 	);
 }
+
+
+// export default function Page() {
+// 	return (
+// 		<>
+// 			<NavBar />
+// 			hii
+// 		</>
+// 	);
+// }
+
