@@ -2,7 +2,7 @@ import React from 'react';
 
 import LecturesScreen from '../lib/modules/lectures/LecturesScreen';
 import notion from '../lib/notion';
-import type { lecture, lecturesProps } from '../lib/types/lecture-props';
+import type { lecturesProps } from '../lib/types/lecture-props';
 
 type Props = {
 	lectures: lecturesProps;
