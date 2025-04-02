@@ -2,6 +2,7 @@ import type { ExtendedRecordMap } from 'notion-types'
 import React from 'react'
 import { NotionRenderer } from 'react-notion-x'
 import SectionLayout from './SectionLayout';
+import { Box } from '@chakra-ui/react';
 
 type Props = {
 	about: ExtendedRecordMap;
@@ -10,7 +11,9 @@ type Props = {
 const AboutSection = ({ about }: Props) => {
 	return (
 		<SectionLayout>
-			<NotionRenderer recordMap={about} />
+			<Box className='about-section'>
+				<NotionRenderer recordMap={about} />
+			</Box>
 		</SectionLayout>
 	)
 }

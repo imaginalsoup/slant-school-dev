@@ -25,13 +25,13 @@ const HomeScreen = ({ banner, about, proponent, lectureList }: Props) => {
 		<Container>
 			<HeroBanner banner={banner} />
 			<Divider />
-			<Container width='80%' margin='auto'>
+			<Container width='80%' margin='auto' paddingBottom='12px'>
 				<AboutSection about={about} />
 				<hr />
 				<LectureList lectureList={lectureList} />
 				<Spacer />
 			</Container>
-			<Box background="var(--black)" color='white' paddingTop='64px' paddingBottom='90px' >
+			<Box background="var(--black)" color='white' paddingTop='84px' paddingBottom='90px' >
 				<AboutProponent proponent={proponent} />
 			</Box>
 		</Container >
