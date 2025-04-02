@@ -1,11 +1,39 @@
-import React from 'react'
+import React from "react"
+React.useLayoutEffect = React.useEffect
 
-// type Props = {}
+import { Container, Link, TabsContent, TabsList, TabsRoot, TabsTrigger } from '@chakra-ui/react'
+import type { lecturesProps } from '../../types/lecture-props';
+import { NotionRenderer } from 'react-notion-x';
 
-const LecturesScreen = () => {
-	return (
-		<div>LecturesScreen</div>
-	)
+type Props = {
+	lectures: lecturesProps;
 }
+
+const LecturesScreen = ({ lectures = [] }: Props) => {
+	return (
+		<Container>
+			<TabsRoot defaultValue="members" marginTop='48px' width="80%">
+				<TabsList>
+					{lectures.map((item) =>
+						<TabsTrigger key={item.id} value={item.id} asChild color="var(--orange)" marginRight='24px'>
+							<Link unstyled href={`#${item.id}`}>
+								{item.id} aslant
+							</Link>
+						</TabsTrigger>
+					)}
+
+				</TabsList>
+				{lectures?.map((item) => (
+					<TabsContent value={item.id} key={item.id}>
+						<NotionRenderer recordMap={
+							item.content}
+						/>
+					</TabsContent>
+				))}
+			</TabsRoot>
+		</Container>)
+}
+
+
 
 export default LecturesScreen
