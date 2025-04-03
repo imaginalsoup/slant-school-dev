@@ -17,17 +17,16 @@ const LecturesScreen = ({ lectures }: Props) => {
 		>
 			<VStack background="var(--black)" paddingTop='56px' >
 				<Heading as='h1' color="var(--white)" width='80%' margin='auto' textAlign='center'>slant school lecture series</Heading>
-				<TabsList paddingBottom="56px" paddingTop='36px' width='80%' display='flex' justifyContent='center' alignItems='center'>
+				<TabsList paddingBottom="56px" paddingTop='36px' width='80%' display='flex'
+					flexFlow='wrap' justifyContent='center' alignItems='center' className='tabs-container'>
 					{lectures.map((item) =>
-						<>
-							<TabsTrigger key={item.id} value={item.id} asChild color="var(--orange2)" className='lecture-tab-nav'>
-								<Link href={`#${item.id}`} textAlign='center' fontSize='large' textDecoration='none' >
-									<>
-										{item.id} aslant
-									</>
-								</Link>
-							</TabsTrigger>
-						</>
+						<TabsTrigger key={item.id} value={item.id} asChild color="var(--orange2)" className='lecture-tab-nav'>
+							<Link href={`#${item.id}`} textAlign='center' textDecoration='none' >
+								<>
+									{item.id} aslant
+								</>
+							</Link>
+						</TabsTrigger>
 					)}
 				</TabsList>
 			</VStack>
