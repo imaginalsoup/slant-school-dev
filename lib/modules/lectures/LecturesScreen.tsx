@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container, Link, TabsContent, TabsList, TabsRoot, TabsTrigger } from '@chakra-ui/react'
 import type { lecturesProps } from '../../types/lecture-props';
 import { NotionPage } from "../../components/NotionPage";
@@ -8,7 +9,7 @@ type Props = {
 
 const LecturesScreen = ({ lectures }: Props) => {
 	return (
-		<Container width='80%' margin='auto'>
+		<Container width='80%' margin='auto' paddingTop='120px' paddingBottom='56px'>
 			<TabsRoot defaultValue="members" marginTop='48px' width="80%">
 				<TabsList>
 					{lectures.map((item) =>
