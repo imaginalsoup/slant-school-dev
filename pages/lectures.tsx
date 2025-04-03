@@ -26,7 +26,7 @@ export const getStaticProps = async () => {
 };
 
 const page = ({ lectures }: Props) => {
-	return <LecturesScreen lectures={lectures} />
+	return <LecturesScreen lectures={lectures || []} />
 }
 
 

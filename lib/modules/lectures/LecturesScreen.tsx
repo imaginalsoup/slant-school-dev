@@ -13,7 +13,7 @@ const LecturesScreen = ({ lectures }: Props) => {
 			<TabsRoot defaultValue="members" marginTop='48px' width="80%">
 				<TabsList>
 					{lectures.map((item) =>
-						<TabsTrigger key={item.id} value={item.id} asChild color="var(--orange)" marginRight='24px'>
+						<TabsTrigger key={item.id} value={item.id} asChild color="var(--orange2)" marginRight='24px'>
 							<Link unstyled href={`#${item.id}`}>
 								{item.id} aslant
 							</Link>
