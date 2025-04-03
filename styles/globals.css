@@ -31,10 +31,10 @@ body {
     margin: 0;
 		background-color: var(--bg) !important;
 		font-family: 'Roboto Mono', monospace, sans-serif;
+		letter-spacing: -0.33px !important;
 }
 
 .notion-text, p {
-	letter-spacing: -0.33px;
 	line-height: 1.4;
 	margin-bottom: 1rem;
 }
@@ -50,27 +50,40 @@ body {
 	display: none;
 }
 
-.lecture-summary a {
-	width: 100%;
-	font-size: large !important;
+.lecture-summary {
+	padding-bottom: 32px;
+}
+
+.lecture-summary h1 {
 	font-weight: 500;
+	padding-bottom: 12px;
+}
+
+.lecture-summary a:first-of-type {
+	width: 100%;
+	font-size: larger !important;
+	font-weight: 600;
 	color: var(--orange) !important;
 	display: flex;
 	justify-self: end;
 	justify-items: end;
-	margin-bottom: 4px;
+	margin-bottom: 8px;
+	text-decoration: underline;
+	text-underline-offset: 2px;
 }
 
 .lecture-summary a:last-of-type {
-	margin-top: 6px;
+	margin-top: 8px;
 	width: 100%;
-	font-size: small;
+	font-size: x-small;
 	font-weight: 400;
 	color: var(--gray) !important;
 	display: flex;
 	justify-self: end;
 	justify-items: end;
 	margin-bottom: 4px;
+	text-decoration: underline;
+	text-underline-offset: 2px;
 }
 
 .lecture-summary td:nth-child(2) {
@@ -81,7 +94,6 @@ body {
 	display: block;
 	font-size: normal;
 	padding-top: 12px;
-	letter-spacing: -0.33px;
 	line-height: 1.4;
 	margin-bottom: 1rem;
 }
@@ -91,7 +103,6 @@ body {
 	font-size: normal;
 	width: 120px !important;
 	padding-right: 24px;
-	letter-spacing: -0.33px;
 	line-height: 1.4;
 	margin-bottom: 1rem;
 }
@@ -123,7 +134,6 @@ body {
 
 .lecture-details main .notion-viewport + .notion-text b {
 font-size: x-large;
-letter-spacing: -0.33px;
 color: var(--black);
 font-weight: 500;
 }
