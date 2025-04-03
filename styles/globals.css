@@ -52,9 +52,9 @@ body {
 
 .lecture-summary a {
 	width: 100%;
-	font-size: large;
+	font-size: large !important;
 	font-weight: 500;
-	color: var(--orange);
+	color: var(--orange) !important;
 	display: flex;
 	justify-self: end;
 	justify-items: end;
@@ -66,7 +66,7 @@ body {
 	width: 100%;
 	font-size: small;
 	font-weight: 400;
-	color: var(--gray);
+	color: var(--gray) !important;
 	display: flex;
 	justify-self: end;
 	justify-items: end;
@@ -117,12 +117,13 @@ body {
 }
 
 .lecture-tab-nav[aria-selected="true"] {
-		color: var(--white) !important;
+	color: var(--white) !important;
 	border-bottom: 3px solid var(--orange);
 }
 
 .lecture-details main .notion-viewport + .notion-text b {
 font-size: x-large;
+letter-spacing: -0.33px;
 color: var(--black);
 font-weight: 500;
 }
