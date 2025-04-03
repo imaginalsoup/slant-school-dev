@@ -3,7 +3,6 @@ React.useLayoutEffect = React.useEffect
 
 import { Container, Link, TabsContent, TabsList, TabsRoot, TabsTrigger } from '@chakra-ui/react'
 import type { lecturesProps } from '../../types/lecture-props';
-import { NotionRenderer } from 'react-notion-x';
 import { NotionPage } from "../../components/NotionPage";
 
 type Props = {
