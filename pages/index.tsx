@@ -20,19 +20,10 @@ export const getStaticProps = async () => {
 
 	const lectureList = await notion.getPage(process.env.LECTURES);
 
-	const lecture1 = await notion.getPage(process.env.LECTURE1);
-	const lecture2 = await notion.getPage(process.env.LECTURE2);
-	const lecture3 = await notion.getPage(process.env.LECTURE3);
-
 	return {
 		props: {
 			about: about,
 			banner: banner,
-			lectures: [
-				{ id: "sociology", content: lecture1, },
-				{ id: "development", content: lecture2 },
-				{ id: "ecocriticism", content: lecture3 },
-			],
 			proponent: proponent,
 			lectureList: lectureList,
 		},
@@ -40,11 +31,11 @@ export const getStaticProps = async () => {
 	};
 };
 
-export default function Page({ about, banner, lectures, proponent, lectureList, }: Props) {
+export default function Page({ about, banner, proponent, lectureList, }: Props) {
 	return (
 		<>
 			<NavBar />
-			<HomeScreen banner={banner} about={about} lectures={lectures} proponent={proponent} lectureList={lectureList} />
+			<HomeScreen banner={banner} about={about} proponent={proponent} lectureList={lectureList} />
 		</>
 	);
 }

@@ -7,17 +7,11 @@ import HeroBanner from '../../components/HeroBanner';
 import AboutProponent from '../../components/AboutProponent';
 import LectureList from '../../components/LectureList';
 
-type lectureProps = {
-	id: string;
-	content: ExtendedRecordMap;
-}
-
 type Props = {
 	banner: ExtendedRecordMap;
 	about: ExtendedRecordMap;
 	proponent: ExtendedRecordMap;
 	lectureList: ExtendedRecordMap;
-	lectures: Array<lectureProps>;
 }
 
 const HomeScreen = ({ banner, about, proponent, lectureList }: Props) => {

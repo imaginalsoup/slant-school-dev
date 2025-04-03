@@ -3,7 +3,8 @@
 :root {
   --black: #181818;
 	--gray: #181818a0;
-  --white: #fffefad5;
+  --offWhite: #fffefaba;
+  --white: #fffefaf5;
 	--orange: #cc5c00;
 	--orange2: #c16a22;
 	--yellow: #d6c72d;
@@ -15,8 +16,14 @@
 		/* border: 1px solid var(--yellow); */
 }
 
+#logo {
+	text-decoration: none;
+	color: var(--black);
+}
+
 .navbar a {
-	color: var(--orange2);
+	color: var(--black);
+		text-decoration: none;
 }
 
 body {
@@ -101,3 +108,44 @@ body {
 .home-about {
 	font-size: small;
 }
+
+.lecture-tab-nav {
+	color: var(--offWhite) !important;
+	padding: 8px;
+	margin-left: 24px;
+	margin-right: 24px;
+}
+
+.lecture-tab-nav[aria-selected="true"] {
+		color: var(--white) !important;
+	border-bottom: 3px solid var(--orange);
+}
+
+.lecture-details main .notion-viewport + .notion-text b {
+font-size: x-large;
+color: var(--black);
+font-weight: 500;
+}
+
+.lecture-details main .notion-text b {
+	color: var(--orange2);
+	font-weight: 400;
+}
+
+.lecture-details blockquote {
+	margin-left: 0;
+	margin-top: 32px;
+	padding: 0;
+	padding-bottom: 180px;
+}
+
+.lecture-details blockquote a {
+		background-color: var(--orange);
+		color: var(--white);
+		border-radius: 12px;
+		padding-top: 18px;
+		padding-bottom: 18px;
+		padding-left: 24px;
+		padding-right: 24px;
+		text-decoration: none;
+	}

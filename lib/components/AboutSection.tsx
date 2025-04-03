@@ -11,7 +11,7 @@ type Props = {
 const AboutSection = ({ about }: Props) => {
 	return (
 		<SectionLayout>
-			<Box className='about-section'>
+			<Box className='about-section' fontSize='small'>
 				<NotionRenderer recordMap={about} />
 			</Box>
 		</SectionLayout>

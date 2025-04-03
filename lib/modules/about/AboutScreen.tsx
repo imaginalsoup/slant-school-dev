@@ -7,7 +7,7 @@ import NavBar from '../../components/NavBar';
 export default function AboutScreen({ recordMap }: { recordMap: ExtendedRecordMap }) {
 	return <Container>
 		<NavBar />
-		<HStack width='80%' height='100vh' margin='auto' className='about-page' textAlign='center'>
+		<HStack width='80%' paddingTop='180px' margin='auto' className='about-page' textAlign='center'>
 			<NotionRenderer
 				disableHeader={true}
 				recordMap={recordMap}

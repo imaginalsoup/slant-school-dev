@@ -1,20 +1,23 @@
-import { HStack } from '@chakra-ui/react'
+import { HStack, VStack } from '@chakra-ui/react'
 import React from 'react'
 import Logo from './Logo'
-// import Link from 'next/link'
+import Link from 'next/link'
 
 const NavBar = () => {
 	return (
-		<HStack height='80px' justifyContent='space-between' padding='24px' background='transparent' className='navbar' paddingBottom='12px'>
-			<Logo />
-			{/* <HStack gap={12} >
+		<HStack height='60px' justifyContent='space-between' background='transparent' className='navbar' alignItems='center' padding='0' paddingLeft='36px' paddingRight='36px'
+		>
+			<VStack marginBottom='0px'>
+				<Logo />
+			</VStack>
+			<HStack gap='32px' justifyContent='center' alignItems='center' alignContent='center' paddingTop='0' height='100%' padding='0' margin='0'>
 				<Link href='/lectures'>
 					lectures
 				</Link>
 				<Link href='/about'>
 					about
 				</Link>
-			</HStack> */}
+			</HStack>
 		</HStack>)
 }
 
