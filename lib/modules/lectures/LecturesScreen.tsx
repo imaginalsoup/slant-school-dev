@@ -1,6 +1,3 @@
-import React from "react"
-React.useLayoutEffect = React.useEffect
-
 import { Container, Link, TabsContent, TabsList, TabsRoot, TabsTrigger } from '@chakra-ui/react'
 import type { lecturesProps } from '../../types/lecture-props';
 import { NotionPage } from "../../components/NotionPage";
@@ -9,7 +6,7 @@ type Props = {
 	lectures: lecturesProps;
 }
 
-const LecturesScreen = ({ lectures = [] }: Props) => {
+const LecturesScreen = ({ lectures }: Props) => {
 	return (
 		<Container width='80%' margin='auto'>
 			<TabsRoot defaultValue="members" marginTop='48px' width="80%">
