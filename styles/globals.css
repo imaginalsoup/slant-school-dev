@@ -2,6 +2,7 @@
 
 :root {
   --black: #181818;
+	--gray: #181818a0;
   --white: #fffefad5;
 	--orange: #cc5c00;
 	--orange2: #c16a22;
@@ -44,9 +45,9 @@ body {
 
 .lecture-summary a {
 	width: 100%;
-	font-size: normal;
+	font-size: large;
 	font-weight: 500;
-	color: var(--black);
+	color: var(--orange);
 	display: flex;
 	justify-self: end;
 	justify-items: end;
@@ -54,10 +55,11 @@ body {
 }
 
 .lecture-summary a:last-of-type {
+	margin-top: 6px;
 	width: 100%;
 	font-size: small;
-	font-weight: 500;
-	color: var(--orange);
+	font-weight: 400;
+	color: var(--gray);
 	display: flex;
 	justify-self: end;
 	justify-items: end;
@@ -88,10 +90,14 @@ body {
 }
 
 .lecture-summary table ~ * {
-	display: none;
+	display: none !important;
 }
 
 .lecture-summary table {
 	width: 100%;
 	margin: auto;
+}
+
+.home-about {
+	font-size: small;
 }

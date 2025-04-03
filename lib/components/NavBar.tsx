@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const NavBar = () => {
 	return (
-		<HStack height='72px' justifyContent='space-between' padding='24px' background='transparent' className='navbar'>
+		<HStack height='48px' justifyContent='space-between' padding='24px' background='transparent' className='navbar'>
 			<Logo />
 			<HStack gap={12} >
 				<Link href='/lectures'>
