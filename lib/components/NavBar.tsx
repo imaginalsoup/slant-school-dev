@@ -5,7 +5,7 @@ import Logo from './Logo'
 
 const NavBar = () => {
 	return (
-		<HStack height='48px' justifyContent='space-between' padding='24px' background='transparent' className='navbar' paddingBottom='12px'>
+		<HStack height='80px' justifyContent='space-between' padding='24px' background='transparent' className='navbar' paddingBottom='12px'>
 			<Logo />
 			{/* <HStack gap={12} >
 				<Link href='/lectures'>
