@@ -4,6 +4,7 @@ React.useLayoutEffect = React.useEffect
 import { Container, Link, TabsContent, TabsList, TabsRoot, TabsTrigger } from '@chakra-ui/react'
 import type { lecturesProps } from '../../types/lecture-props';
 import { NotionRenderer } from 'react-notion-x';
+import { NotionPage } from "../../components/NotionPage";
 
 type Props = {
 	lectures: lecturesProps;
@@ -11,7 +12,7 @@ type Props = {
 
 const LecturesScreen = ({ lectures = [] }: Props) => {
 	return (
-		<Container>
+		<Container width='80%' margin='auto'>
 			<TabsRoot defaultValue="members" marginTop='48px' width="80%">
 				<TabsList>
 					{lectures.map((item) =>
@@ -25,7 +26,7 @@ const LecturesScreen = ({ lectures = [] }: Props) => {
 				</TabsList>
 				{lectures?.map((item) => (
 					<TabsContent value={item.id} key={item.id}>
-						<NotionRenderer recordMap={
+						<NotionPage recordMap={
 							item.content}
 						/>
 					</TabsContent>
